@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/Header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tambah Destinasi Wisata Baru"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        android:paddingTop="32dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        />
+    <RelativeLayout
+        android:id="@+id/fieldAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:layout_below="@id/Header"
+        android:background="@drawable/rounded_corner3"
+        android:padding="18dp"
+        >
+        <EditText
+            android:id="@+id/NotesIDAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+        <EditText
+            android:id="@+id/MapsTitleAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama tempat wisata"
+            android:padding="12dp"
+            android:background="@drawable/rounded_corner"
+            />
+        <EditText
+            android:id="@+id/MapsDescAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Deskripsi tempat wisata"
+            android:background="@drawable/rounded_corner"
+            android:layout_below="@id/MapsTitleAdd"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"
+            android:lines="8"
+            android:gravity="top"
+            android:layout_marginBottom="10dp"
+            />
+        <TextView
+            android:id="@+id/txtlocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lokasi tempat wisata"
+            android:layout_below="@id/MapsDescAdd"
+            android:textColor="@color/black"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="6dp"
+            />
+        <EditText
+            android:id="@+id/Latitude"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:hint="Latitude"
+            android:padding="12dp"
+            android:layout_below="@id/txtlocation"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/rounded_corner"
+            />
+        <EditText
+            android:id="@+id/Longitude"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:hint="Longitude"
+            android:padding="12dp"
+            android:layout_below="@id/txtlocation"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/rounded_corner"
+            />
+    </RelativeLayout>
+    <Button
+        android:id="@+id/SaveAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tambah"
+        android:layout_below="@id/fieldAdd"
+        android:layout_alignParentRight="true"
+        android:layout_margin="24dp"
+        />
+</RelativeLayout>
+    <!--Nama : Saeful Anwar Oktariansah-->
+    <!--NIM  : 10119094-->
+    <!--Kelas: IF-3-->

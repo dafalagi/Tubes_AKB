@@ -1,3 +1,8 @@
+
+// Nama : Saeful Anwar Oktariansah
+// NIM  : 10119094
+// Kelas: IF-3
+
 package com.example.tubes_akb;
 
 import android.Manifest;
@@ -12,9 +17,9 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
-
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationServices;
+//
+//import com.google.android.gms.location.FusedLocationProviderClient;
+//import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -27,7 +32,7 @@ import com.google.android.gms.tasks.Task;
 public class HomeFragment extends Fragment {
 
     private SupportMapFragment mapFragment;
-    private FusedLocationProviderClient client;
+//    private FusedLocationProviderClient client;
     private Button btnFind;
     private double currentLat = 0, currentLong = 0;
 
@@ -41,10 +46,10 @@ public class HomeFragment extends Fragment {
 
         View fragment = inflater.inflate(R.layout.fragment_home, container, false);
 
-        client = LocationServices.getFusedLocationProviderClient(getActivity());
+//        client = LocationServices.getFusedLocationProviderClient(getActivity());
         mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
 
-        btnFind = (Button) fragment.findViewById(R.id.btn_find);
+//        btnFind = (Button) fragment.findViewById(R.id.btn_find);
 
         getCurrentLocation();
 
@@ -90,28 +95,24 @@ public class HomeFragment extends Fragment {
                     new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 44);
         }
 
-        Task<Location> task = client.getLastLocation();
-        task.addOnSuccessListener(new OnSuccessListener<Location>() {
-            @Override
-            public void onSuccess(Location location) {
-                if(location != null){
-                    currentLat = location.getLatitude();
-                    currentLong = location.getLongitude();
-                    mapFragment.getMapAsync(new OnMapReadyCallback() {
-                        @Override
-                        public void onMapReady(@NonNull GoogleMap googleMap) {
-                            LatLng lokasi = new LatLng(currentLat,currentLong);
-                            MarkerOptions options = new MarkerOptions().position(lokasi).title("Lokasi Saat Ini");
-                            googleMap.addMarker(options);
-                            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(lokasi, 17));
-                        }
-                    });
-                }
-            }
-        });
+//        Task<Location> task = client.getLastLocation();
+//        task.addOnSuccessListener(new OnSuccessListener<Location>() {
+//            @Override
+//            public void onSuccess(Location location) {
+//                if(location != null){
+//                    currentLat = location.getLatitude();
+//                    currentLong = location.getLongitude();
+//                    mapFragment.getMapAsync(new OnMapReadyCallback() {
+//                        @Override
+//                        public void onMapReady(@NonNull GoogleMap googleMap) {
+//                            LatLng lokasi = new LatLng(currentLat,currentLong);
+//                            MarkerOptions options = new MarkerOptions().position(lokasi).title("Lokasi Saat Ini");
+//                            googleMap.addMarker(options);
+//                            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(lokasi, 17));
+//                        }
+//                    });
+//                }
+//            }
+//        });
     }
 }
-
-//NIM : 10119113
-//Nama : Dafa Rizky Fahreza
-//Kelas : IF3
