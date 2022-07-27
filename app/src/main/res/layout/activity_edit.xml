@@ -19,7 +19,7 @@
         android:textColor="@color/black"
         />
     <RelativeLayout
-        android:id="@+id/fieldAdd"
+        android:id="@+id/fieldEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
@@ -28,13 +28,13 @@
         android:padding="18dp"
         >
         <EditText
-            android:id="@+id/NotesIDAdd"
+            android:id="@+id/IDWisata"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:visibility="gone"
             />
         <EditText
-            android:id="@+id/MapsTitleAdd"
+            android:id="@+id/WisataTitleEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nama tempat wisata"
@@ -42,12 +42,12 @@
             android:background="@drawable/rounded_corner"
             />
         <EditText
-            android:id="@+id/MapsDescAdd"
+            android:id="@+id/WisataDescEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Deskripsi tempat wisata"
             android:background="@drawable/rounded_corner"
-            android:layout_below="@id/MapsTitleAdd"
+            android:layout_below="@id/WisataTitleEdit"
             android:padding="12dp"
             android:layout_marginTop="12dp"
             android:lines="8"
@@ -59,13 +59,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Koordinat tempat wisata"
-            android:layout_below="@id/MapsDescAdd"
+            android:layout_below="@id/WisataDescEdit"
             android:textColor="@color/black"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="6dp"
             />
         <EditText
-            android:id="@+id/Latitude"
+            android:id="@+id/WisataLatitudeEdit"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:hint="Latitude"
@@ -75,7 +75,7 @@
             android:background="@drawable/rounded_corner"
             />
         <EditText
-            android:id="@+id/Longitude"
+            android:id="@+id/WisataLongitudeEdit"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:hint="Longitude"
@@ -86,13 +86,26 @@
             />
     </RelativeLayout>
     <Button
-        android:id="@+id/SaveAdd"
+        android:id="@+id/BtnSaveEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tambah"
-        android:layout_below="@id/fieldAdd"
+        android:text="Simpan"
+        android:layout_below="@id/fieldEdit"
         android:layout_alignParentRight="true"
-        android:layout_margin="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="12dp"
+        />
+    <Button
+        android:id="@+id/BtnDeleteWisata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/BtnSaveEdit"
+        android:layout_below="@+id/fieldEdit"
+        android:text="Hapus"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="12dp"
         />
 </RelativeLayout>
     <!--Nama : Saeful Anwar Oktariansah-->

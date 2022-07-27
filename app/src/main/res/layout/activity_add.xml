@@ -28,13 +28,13 @@
         android:padding="18dp"
         >
         <EditText
-            android:id="@+id/NotesIDAdd"
+            android:id="@+id/IDWisata"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:visibility="gone"
             />
         <EditText
-            android:id="@+id/MapsTitleAdd"
+            android:id="@+id/WisataTitleAdd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nama tempat wisata"
@@ -42,12 +42,12 @@
             android:background="@drawable/rounded_corner"
             />
         <EditText
-            android:id="@+id/MapsDescAdd"
+            android:id="@+id/WisataDescAdd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Deskripsi tempat wisata"
             android:background="@drawable/rounded_corner"
-            android:layout_below="@id/MapsTitleAdd"
+            android:layout_below="@id/WisataTitleAdd"
             android:padding="12dp"
             android:layout_marginTop="12dp"
             android:lines="8"
@@ -59,13 +59,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Lokasi tempat wisata"
-            android:layout_below="@id/MapsDescAdd"
+            android:layout_below="@id/WisataDescAdd"
             android:textColor="@color/black"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="6dp"
             />
         <EditText
-            android:id="@+id/Latitude"
+            android:id="@+id/WisataLatitudeAdd"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:hint="Latitude"
@@ -75,7 +75,7 @@
             android:background="@drawable/rounded_corner"
             />
         <EditText
-            android:id="@+id/Longitude"
+            android:id="@+id/WisataLongitudeAdd"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:hint="Longitude"
