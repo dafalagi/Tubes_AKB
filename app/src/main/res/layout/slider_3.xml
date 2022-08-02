@@ -13,7 +13,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.36"
-        app:srcCompat="@drawable/mobile_icon" />
+        app:srcCompat="@drawable/tablet" />
 
     <TextView
         android:id="@+id/textView"
@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_regular"
         android:text="Dimanapun! Kapanpun!"
-        android:textColor="@color/teal_700"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
