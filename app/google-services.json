@@ -1,15 +1,74 @@
 {
   "project_info": {
     "project_number": "498980411819",
+    "firebase_url": "https://tubes-akb-d4fc6-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "tubes-akb-d4fc6",
     "storage_bucket": "tubes-akb-d4fc6.appspot.com"
   },
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:498980411819:android:47e1be6a9570239270daee",
+        "android_client_info": {
+          "package_name": "com.example.firebaselogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "498980411819-71ql8kencbjnvfnba4etilulj92d0qre.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARPgKGSmFJNo5f8vH5LG_Tv6SuIZuq1co"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "498980411819-71ql8kencbjnvfnba4etilulj92d0qre.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:498980411819:android:d8846de4570eacdc70daee",
         "android_client_info": {
           "package_name": "com.example.tubes_akb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "498980411819-71ql8kencbjnvfnba4etilulj92d0qre.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARPgKGSmFJNo5f8vH5LG_Tv6SuIZuq1co"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "498980411819-71ql8kencbjnvfnba4etilulj92d0qre.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498980411819:android:2b21a837b6875fef70daee",
+        "android_client_info": {
+          "package_name": "com.example.uts_akb_if3_10119094"
         }
       },
       "oauth_client": [
