@@ -20,6 +20,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/HeaderFragment1"
+        android:layout_marginTop="10dp"
+        tools:listitem="@layout/card_destinasi"
         />
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingbtnAdd"
