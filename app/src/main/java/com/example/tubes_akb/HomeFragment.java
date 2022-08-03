@@ -48,6 +48,8 @@ public class HomeFragment extends Fragment {
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference();
+        RecyclerView ListMap = fragment.findViewById(R.id.ListMap);
+        listDestinasi = new ArrayList<>();
 
         adapterDestinasi = new AdapterDestinasi(listDestinasi, getActivity());
         ListMap.setLayoutManager(new LinearLayoutManager(fragment.getContext()));
