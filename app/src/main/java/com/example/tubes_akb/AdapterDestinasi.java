@@ -1,62 +1,77 @@
 
-// Saeful Anwar Oktariansah
-// 10119094
+// Dafa Rizky Fahreza
+// 10119113
 // IF-3
 
 package com.example.tubes_akb;
 
-import android.app.Activity;
+import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
 
-public class AdapterDestinasi extends RecyclerView.Adapter<AdapterDestinasi.MyViewHolder> {
-    private List<ListMaps> mList;
-    private Activity activity;
-    DatabaseReference database = FirebaseDatabase.getInstance().getReference();
+public class AdapterDestinasi{
+    private Context nContext;
+    private wisataAdapter nWisataAdapter;
 
-    public AdapterDestinasi(List<ListMaps>mList, Activity activity){
-        this.mList = mList;
-        this.activity = activity;
-    }
-    @NonNull
-    @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View viewItem = inflater.inflate(R.layout.card_destinasi, parent, false);
-        return new MyViewHolder(viewItem);
+    public void setConfig(RecyclerView recyclerView, Context context, List<ListMaps> listMaps,
+                          List<String> keys){
+        nContext = context;
+        nWisataAdapter = new wisataAdapter(listMaps, keys);
+        recyclerView.setLayoutManager(new LinearLayoutManager(context));
+        recyclerView.setAdapter(nWisataAdapter);
     }
 
-    @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        final ListMaps data = mList.get(position);
-        holder.ListTitle.setText(data.getTitle());
-        holder.ListDescription.setText(data.getDesc());
+    class wisataItemView extends RecyclerView.ViewHolder{
+        private TextView title;
+        private TextView desc;
+        private TextView lat;
+        private TextView lng;
+        private String key;
+
+        public wisataItemView(ViewGroup parent){
+            super(LayoutInflater.from(nContext).
+                    inflate(R.layout.fragment_home, parent, false));
+
+            title = (TextView) itemView.findViewById(R.id.ListTitle);
+            desc = (TextView) itemView.findViewById(R.id.ListDescription);
+        }
+
+        public void bind(ListMaps listMap, String key){
+            title.setText(listMap.getTitle());
+            desc.setText(listMap.getDesc());
+        }
     }
 
-    @Override
-    public int getItemCount() {
-        return mList.size();
-    }
+    class wisataAdapter extends RecyclerView.Adapter<wisataItemView>{
+        private List<ListMaps> listMaps;
+        private List<String> keys;
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView ListTitle, ListDescription;
-//        CardView ListMap;
-        public MyViewHolder(@NonNull View itemView) {
-            super(itemView);
-            ListTitle = itemView.findViewById(R.id.ListTitle);
-            ListDescription = itemView.findViewById(R.id.ListDescription);
-//            ListMap = itemView.findViewById(R.id.ListMap);
+        public wisataAdapter(List<ListMaps> listMaps, List<String> keys) {
+            this.listMaps = listMaps;
+            this.keys = keys;
+        }
+
+        @NonNull
+        @Override
+        public wisataItemView onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            return new wisataItemView(parent);
+        }
+
+        @Override
+        public void onBindViewHolder(@NonNull wisataItemView holder, int position) {
+            holder.bind(listMaps.get(position), keys.get(position));
+        }
+
+        @Override
+        public int getItemCount() {
+            return listMaps.size();
         }
     }
 }
