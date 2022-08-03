@@ -23,7 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.sql.DatabaseMetaData;
 
 public class AddActivity extends AppCompatActivity {
-    EditText addnama, adddesc, addcreated, addlatitude, addlongitude;
+    EditText addnama, adddesc, addlatitude, addlongitude;
     Button btn_simpan;
     DatabaseReference database = FirebaseDatabase.getInstance().getReference();
 
@@ -58,9 +58,11 @@ public class AddActivity extends AppCompatActivity {
                 }else{
                     database.child("Destinasi Wisata").push().setValue(new ListMaps(getNama, getDesc, getLatitude, getLongitude)).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
-                        public void onSuccess(Void aVoid) {
+                        public void onSuccess(Void unused) {
                             Toast.makeText(AddActivity.this, "Data berhasil ditambah", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(AddActivity.this, MainActivity.class));
+//                            Intent intent = new Intent(AddActivity.this, MainActivity.class);
+//                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             finish();
                         }
                     }).addOnFailureListener(new OnFailureListener() {

@@ -56,6 +56,7 @@ public class ListMaps {
     public void setLongitude(String longitude) {
         this.longitude = longitude;
     }
+
     //    public ListMaps(){}
 //    public ListMaps(String title, String desc, String created, String latitude, String longitude){
 //        this.title = title;

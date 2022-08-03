@@ -40,8 +40,8 @@ public class AdapterDestinasi extends RecyclerView.Adapter<AdapterDestinasi.MyVi
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         final ListMaps data = mList.get(position);
-        holder.ListTitle.setText("Nama :" + data.getTitle());
-        holder.ListDescription.setText("Deskripsi :" + data.getDesc());
+        holder.ListTitle.setText(data.getTitle());
+        holder.ListDescription.setText(data.getDesc());
     }
 
     @Override
@@ -51,12 +51,12 @@ public class AdapterDestinasi extends RecyclerView.Adapter<AdapterDestinasi.MyVi
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView ListTitle, ListDescription;
-        CardView ListMap;
+//        CardView ListMap;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             ListTitle = itemView.findViewById(R.id.ListTitle);
             ListDescription = itemView.findViewById(R.id.ListDescription);
-            ListMap = itemView.findViewById(R.id.ListMap);
+//            ListMap = itemView.findViewById(R.id.ListMap);
         }
     }
 }

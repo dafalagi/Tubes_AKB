@@ -56,13 +56,14 @@ public class HomeFragment extends Fragment {
         ListMap.setAdapter(adapterDestinasi);
         getListMaps();
 
-        FloatingActionButton Address =fragment.findViewById(R.id.floatingbtnAdd);
+        FloatingActionButton Address = fragment.findViewById(R.id.floatingbtnAdd);
         Address.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 toAdd();
             }
         });
+
         return fragment;
     }
 
