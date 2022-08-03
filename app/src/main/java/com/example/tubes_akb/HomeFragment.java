@@ -5,42 +5,34 @@
 
 package com.example.tubes_akb;
 
-import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.location.Location;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-//
-//import com.google.android.gms.location.FusedLocationProviderClient;
-//import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
 
-    FloatingActionButton tambahdess;
+    FloatingActionButton tambahdes;
     AdapterDestinasi adapterDestinasi;
-    DatabaseReference database = FirebaseDatabase.getInstance().getReference();
+    DatabaseReference databaseReference;
+    FirebaseDatabase firebaseDatabase;
     ArrayList<ListMaps> listDestinasi;
     RecyclerView ListMap;
 
@@ -54,17 +46,58 @@ public class HomeFragment extends Fragment {
 
         View fragment = inflater.inflate(R.layout.fragment_home, container, false);
 
-        FloatingActionButton Adddess =fragment.findViewById(R.id.floatingbtnAdd);
-        Adddess.setOnClickListener(new View.OnClickListener() {
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference();
+
+        adapterDestinasi = new AdapterDestinasi(listDestinasi, getActivity());
+        ListMap.setLayoutManager(new LinearLayoutManager(fragment.getContext()));
+        ListMap.setAdapter(adapterDestinasi);
+        getListMaps();
+
+        FloatingActionButton Address =fragment.findViewById(R.id.floatingbtnAdd);
+        Address.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                toAddnote();
+                toAdd();
             }
         });
         return fragment;
     }
-    public void toAddnote(){
+
+    public void toAdd(){
         Intent i = new Intent(getActivity(), AddActivity.class);
         startActivity(i);
+    }
+
+    public void getListMaps(){
+        listDestinasi.clear();
+
+        databaseReference.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                listDestinasi.add(snapshot.getValue(ListMaps.class));
+                adapterDestinasi.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                adapterDestinasi.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot snapshot) {
+                adapterDestinasi.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                adapterDestinasi.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 }
