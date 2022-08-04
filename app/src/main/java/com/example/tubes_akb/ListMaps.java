@@ -6,7 +6,6 @@
 package com.example.tubes_akb;
 
 public class ListMaps {
-    private long id;
     private String title, description;
     private double latitude, longitude;
 
@@ -19,14 +18,6 @@ public class ListMaps {
         this.description = description;
         this.latitude = latitude;
         this.longitude = longitude;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public String getTitle() {
