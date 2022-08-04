@@ -68,4 +68,24 @@ public class DBHelper {
                     }
                 });
     }
+
+    public void updateWisata(String key, ListMaps listMap, final DataStatus dataStatus){
+        databaseReference.child(key).setValue(listMap).
+                addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        dataStatus.DataIsUpdated();
+                    }
+                });
+    }
+
+    public void deleteWisata(String key, ListMaps listMap, final DataStatus dataStatus){
+        databaseReference.child(key).setValue(listMap).
+                addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        dataStatus.DataIsDeleted();
+                    }
+                });
+    }
 }
