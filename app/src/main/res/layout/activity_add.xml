@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Nama : Saeful Anwar Oktariansah-->
+<!--NIM  : 10119094-->
+<!--Kelas: IF-3-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddActivity"
-    android:background="@drawable/flat_bg">
+    android:background="@drawable/skyler_ewing">
     <TextView
         android:id="@+id/Header"
         android:layout_width="match_parent"
@@ -91,12 +94,11 @@
         android:id="@+id/SaveAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tambah"
+        android:hint="Tambah"
+        android:textColorHint="@color/white"
+        android:textStyle="bold"
         android:layout_below="@id/fieldAdd"
         android:layout_alignParentRight="true"
         android:layout_margin="24dp"
         />
 </RelativeLayout>
-    <!--Nama : Saeful Anwar Oktariansah-->
-    <!--NIM  : 10119094-->
-    <!--Kelas: IF-3-->

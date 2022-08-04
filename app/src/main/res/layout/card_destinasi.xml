@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<!--Nama : Saeful Anwar Oktariansah-->
+<!--NIM  : 10119094-->
+<!--Kelas: IF-3-->
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/carddestinasi"
     android:layout_width="match_parent"
@@ -13,7 +17,6 @@
         android:layout_height="match_parent"
         android:layout_margin="10dp"
         android:orientation="vertical"
-        android:background="@drawable/rounded_corner2"
         android:padding="18dp"
         >
         <TextView
@@ -40,14 +43,15 @@
             android:layout_height="wrap_content"
             android:text="Title"
             android:textStyle="bold"
-            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textSize="18dp"
             />
         <TextView
             android:id="@+id/ListDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Description"
-            android:textSize="18dp"
+            android:textSize="16dp"
             android:layout_marginTop="16sp"
             android:lines="1"
             android:maxLines="1"

@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Nama : Saeful Anwar Oktariansah-->
+<!--NIM  : 10119094-->
+<!--Kelas: IF-3-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,7 +9,7 @@
     android:layout_height="match_parent"
     tools:context=".DetailActivity"
     android:padding="16dp"
-    android:background="@drawable/flat_bg">
+    android:background="@drawable/skyler_ewing">
     <TextView
         android:id="@+id/HeaderDW"
         android:layout_width="match_parent"
@@ -93,6 +96,7 @@
                     android:layout_height="wrap_content"
                     android:padding="3dp"
                     android:text="Latitude"
+                    android:textColor="@color/black"
                     android:textSize="16dp" />
 
                 <TextView
@@ -112,6 +116,7 @@
                     android:id="@+id/Longitude"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:padding="4dp"
                     android:text="Longitude" />
 
@@ -126,22 +131,31 @@
             </RelativeLayout>
         </RelativeLayout>
     </RelativeLayout>
+
     <Button
         android:id="@+id/btnMap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/BodyDetail"
-        android:layout_marginHorizontal="6dp"
         android:layout_alignParentRight="true"
-        android:text="Map"/>
+        android:layout_marginHorizontal="6dp"
+        android:hint="Map"
+        android:textColorHint="@color/white"
+        android:textStyle="bold" />
+
     <Button
         android:id="@+id/btnEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/BodyDetail"
-        android:layout_toLeftOf="@id/btnMap"
         android:layout_marginHorizontal="6dp"
-        android:text="Edit"/>
+        android:layout_toLeftOf="@id/btnMap"
+        android:backgroundTint="@color/white"
+        android:hint="Edit"
+        android:textColorHint="@color/BtnPrimary"
+        android:textStyle="bold"
+        app:strokeColor="#0066FF"
+        app:strokeWidth="@dimen/cardview_compat_inset_shadow" />
 
     <Button
         android:id="@+id/btnHapus"
@@ -151,10 +165,10 @@
         android:layout_marginHorizontal="6dp"
         android:layout_toLeftOf="@id/btnEdit"
         android:backgroundTint="@color/white"
-        android:text="Hapus"
+        android:hint="Hapus"
         android:textColor="@color/black"
-        />
+        android:textColorHint="@color/BtnNegative"
+        android:textStyle="bold"
+        app:strokeColor="#FA0000"
+        app:strokeWidth="@dimen/cardview_compat_inset_shadow" />
 </RelativeLayout>
-    <!--Nama : Saeful Anwar Oktariansah-->
-    <!--NIM  : 10119094-->
-    <!--Kelas: IF-3-->

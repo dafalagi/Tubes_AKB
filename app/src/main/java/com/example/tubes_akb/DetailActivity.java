@@ -1,4 +1,7 @@
 package com.example.tubes_akb;
+// Nama :Saeful Anwar Oktariansah
+// NIM  : 10119094
+// Kelas: IF-3
 
 import androidx.appcompat.app.AppCompatActivity;
 

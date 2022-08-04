@@ -19,16 +19,28 @@
         <entry key="..\:/Users/AiAbe/StudioProjects/Tubes_AKB/app/src/main/res/layout/slider_1.xml" value="0.25" />
         <entry key="..\:/Users/AiAbe/StudioProjects/Tubes_AKB/app/src/main/res/layout/slider_2.xml" value="0.22" />
         <entry key="..\:/Users/AiAbe/StudioProjects/Tubes_AKB/app/src/main/res/layout/slider_3.xml" value="0.2" />
+        <entry key="..\:/Users/Saeful A/AndroidStudioProjects/Tubes_AKB/app/src/main/res/drawable/custom_btn.xml" value="0.146" />
         <entry key="..\:/Users/Saeful A/AndroidStudioProjects/Tubes_AKB/app/src/main/res/drawable/ic_launcher_background.xml" value="0.132" />
+        <entry key="..\:/Users/Saeful A/AndroidStudioProjects/Tubes_AKB/app/src/main/res/drawable/rounded_corner.xml" value="0.146" />
+        <entry key="..\:/Users/Saeful A/AndroidStudioProjects/Tubes_AKB/app/src/main/res/drawable/rounded_corner2.xml" value="0.146" />
+        <entry key="..\:/Users/Saeful A/AndroidStudioProjects/Tubes_AKB/app/src/main/res/drawable/rounded_corner3.xml" value="0.146" />
+        <entry key="..\:/Users/Saeful A/AndroidStudioProjects/Tubes_AKB/app/src/main/res/drawable/rounded_corner4.xml" value="0.146" />
+        <entry key="..\:/Users/Saeful A/AndroidStudioProjects/Tubes_AKB/app/src/main/res/drawable/rounded_corner5.xml" value="0.146" />
+        <entry key="..\:/Users/Saeful A/AndroidStudioProjects/Tubes_AKB/app/src/main/res/font/custom_font.xml" value="0.14322916666666666" />
         <entry key="..\:/Users/Saeful A/AndroidStudioProjects/Tubes_AKB/app/src/main/res/layout/activity_add.xml" value="0.264" />
-        <entry key="..\:/Users/Saeful A/AndroidStudioProjects/Tubes_AKB/app/src/main/res/layout/activity_detail.xml" value="0.264" />
-        <entry key="..\:/Users/Saeful A/AndroidStudioProjects/Tubes_AKB/app/src/main/res/layout/activity_edit.xml" value="0.11141304347826086" />
+        <entry key="..\:/Users/Saeful A/AndroidStudioProjects/Tubes_AKB/app/src/main/res/layout/activity_detail.xml" value="0.4" />
+        <entry key="..\:/Users/Saeful A/AndroidStudioProjects/Tubes_AKB/app/src/main/res/layout/activity_edit.xml" value="0.264" />
         <entry key="..\:/Users/Saeful A/AndroidStudioProjects/Tubes_AKB/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/Saeful A/AndroidStudioProjects/Tubes_AKB/app/src/main/res/layout/activity_maps.xml" value="0.1408514492753623" />
-        <entry key="..\:/Users/Saeful A/AndroidStudioProjects/Tubes_AKB/app/src/main/res/layout/card_destinasi.xml" value="0.11141304347826086" />
-        <entry key="..\:/Users/Saeful A/AndroidStudioProjects/Tubes_AKB/app/src/main/res/layout/fragment_home.xml" value="0.1" />
-        <entry key="..\:/Users/Saeful A/AndroidStudioProjects/Tubes_AKB/app/src/main/res/layout/fragment_info.xml" value="0.12135416666666667" />
-        <entry key="..\:/Users/Saeful A/AndroidStudioProjects/Tubes_AKB/app/src/main/res/layout/fragment_profile.xml" value="0.12135416666666667" />
+        <entry key="..\:/Users/Saeful A/AndroidStudioProjects/Tubes_AKB/app/src/main/res/layout/activity_slider.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Saeful A/AndroidStudioProjects/Tubes_AKB/app/src/main/res/layout/activity_splash_screen.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Saeful A/AndroidStudioProjects/Tubes_AKB/app/src/main/res/layout/card_destinasi.xml" value="0.264" />
+        <entry key="..\:/Users/Saeful A/AndroidStudioProjects/Tubes_AKB/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Users/Saeful A/AndroidStudioProjects/Tubes_AKB/app/src/main/res/layout/fragment_info.xml" value="0.2" />
+        <entry key="..\:/Users/Saeful A/AndroidStudioProjects/Tubes_AKB/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
+        <entry key="..\:/Users/Saeful A/AndroidStudioProjects/Tubes_AKB/app/src/main/res/layout/slider_1.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Saeful A/AndroidStudioProjects/Tubes_AKB/app/src/main/res/layout/slider_2.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Saeful A/AndroidStudioProjects/Tubes_AKB/app/src/main/res/layout/slider_3.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
