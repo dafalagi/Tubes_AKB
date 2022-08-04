@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+    <TextView
+        android:id="@+id/HeaderDW"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Destinasi Wisata"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        android:paddingTop="32dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        />
+
+    <RelativeLayout
+        android:id="@+id/BodyDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/HeaderDW"
+        android:layout_marginHorizontal="24dp"
+        android:background="@drawable/rounded_corner3"
+        android:padding="12dp">
+
+        <RelativeLayout
+            android:id="@+id/Section1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:background="@drawable/rounded_corner"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/NamaTempat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama tempat wisata : "
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/NamaTempatTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/NamaTempat"
+                android:text="Example"
+                android:textSize="16dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Section2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Section1"
+            android:layout_margin="6dp"
+            android:background="@drawable/rounded_corner"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/Deskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Deskripsi"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Deskripsi"
+                android:lines="5" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Section3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Section2"
+            android:layout_margin="6dp">
+
+            <TextView
+                android:id="@+id/Latitude"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Latitude"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/LatitudeTxt"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Latitude"
+                android:background="@drawable/rounded_corner"
+                android:padding="12dp"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/Longitude"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_toRightOf="@id/Latitude"
+                android:padding="4dp"
+                android:text="Longitude" />
+
+            <TextView
+                android:id="@+id/LongitudeTxt"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Longitude"
+                android:layout_marginLeft="24dp"
+                android:layout_toRightOf="@id/LatitudeTxt"
+                android:background="@drawable/rounded_corner"
+                android:padding="12dp"
+                android:text="" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

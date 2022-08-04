@@ -40,15 +40,6 @@
             android:lines="1"
             android:maxLines="1"
             />
-        <TextView
-            android:id="@+id/ListCreate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Create"
-            android:layout_marginTop="5dp"
-            android:gravity="right"
-            android:textSize="12dp"
-            />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

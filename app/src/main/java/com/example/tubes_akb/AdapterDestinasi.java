@@ -32,17 +32,17 @@ public class AdapterDestinasi{
 
     class wisataItemView extends RecyclerView.ViewHolder{
         private TextView title;
-        private TextView desc;
+        private TextView description;
         private TextView lat;
         private TextView lng;
         private String key;
 
         public wisataItemView(ViewGroup parent){
             super(LayoutInflater.from(nContext).
-                    inflate(R.layout.fragment_home, parent, false));
+                    inflate(R.layout.card_destinasi, parent, false));
 
             title = (TextView) itemView.findViewById(R.id.ListTitle);
-            desc = (TextView) itemView.findViewById(R.id.ListDescription);
+            description = (TextView) itemView.findViewById(R.id.ListDescription);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -55,7 +55,7 @@ public class AdapterDestinasi{
 
         public void bind(ListMaps listMap, String key){
             title.setText(listMap.getTitle());
-            desc.setText(listMap.getDesc());
+            description.setText(listMap.getDescription());
         }
     }
 
@@ -83,5 +83,6 @@ public class AdapterDestinasi{
         public int getItemCount() {
             return listMaps.size();
         }
+
     }
 }

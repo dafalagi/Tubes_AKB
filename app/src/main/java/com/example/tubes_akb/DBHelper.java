@@ -29,7 +29,7 @@ public class DBHelper {
     }
 
     public DBHelper(){
-        firebaseDatabase = FirebaseDatabase.getInstance();
+        firebaseDatabase = FirebaseDatabase.getInstance("https://tubes-akb-d4fc6-default-rtdb.asia-southeast1.firebasedatabase.app");
         databaseReference = firebaseDatabase.getReference("listWisata");
     }
 
