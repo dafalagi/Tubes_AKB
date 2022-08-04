@@ -1,8 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Nama : Arif Abdan Syakur-->
+<!--NIM : 10119085-->
+<!--Kelas : IF-3-->
+
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/info_back"
     tools:context=".InfoFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+
+        >
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/polaris_lite"
+            android:gravity="center"
+            android:textSize="40dp"
+            android:fontFamily="@font/mochiypopone"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Version 1.0"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_below="@+id/app_name"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/version"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="Build Date : 21 July 2022"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            />
+
+
+    </RelativeLayout>
+
+
+
 
 </FrameLayout>
