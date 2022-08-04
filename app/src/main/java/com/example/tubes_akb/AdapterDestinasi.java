@@ -33,8 +33,8 @@ public class AdapterDestinasi{
     class wisataItemView extends RecyclerView.ViewHolder{
         private TextView title;
         private TextView description;
-        private TextView lat;
-        private TextView lng;
+        private TextView latitude;
+        private TextView longitude;
         private String key;
 
         public wisataItemView(ViewGroup parent){
@@ -43,12 +43,18 @@ public class AdapterDestinasi{
 
             title = (TextView) itemView.findViewById(R.id.ListTitle);
             description = (TextView) itemView.findViewById(R.id.ListDescription);
+            latitude = (TextView) itemView.findViewById(R.id.LatitudeCD);
+            longitude = (TextView) itemView.findViewById(R.id.LongitudeCD);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(view.getContext(), EditActivity.class);
-                    intent.putExtra("id", nWisataAdapter.keys.get(getBindingAdapterPosition()));
+                    Intent intent = new Intent(view.getContext(), DetailActivity.class);
+                    intent.putExtra("key",key);
+                    intent.putExtra("title", title.getText().toString());
+                    intent.putExtra("description", description.getText().toString());
+                    intent.putExtra("latitude", Double.parseDouble(latitude.getText().toString()));
+                    intent.putExtra("longitude", Double.parseDouble(longitude.getText().toString()));
                     view.getContext().startActivity(intent);
                 }
             });
@@ -57,6 +63,9 @@ public class AdapterDestinasi{
         public void bind(ListMaps listMap, String key){
             title.setText(listMap.getTitle());
             description.setText(listMap.getDescription());
+            latitude.setText(String.valueOf(listMap.getLatitude()));
+            longitude.setText(String.valueOf(listMap.getLongitude()));
+            this.key = key;
         }
     }
 

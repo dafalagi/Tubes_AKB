@@ -79,8 +79,8 @@ public class DBHelper {
                 });
     }
 
-    public void deleteWisata(String key, ListMaps listMap, final DataStatus dataStatus){
-        databaseReference.child(key).setValue(listMap).
+    public void deleteWisata(String key, final DataStatus dataStatus){
+        databaseReference.child(key).setValue(null).
                 addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
