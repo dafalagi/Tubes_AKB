@@ -21,6 +21,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.sql.DatabaseMetaData;
+import java.util.List;
 
 public class AddActivity extends AppCompatActivity {
     EditText addnama, adddesc, addlatitude, addlongitude;
@@ -39,41 +40,54 @@ public class AddActivity extends AppCompatActivity {
         btn_simpan = findViewById(R.id.SaveAdd);
 
 
-//        btn_simpan.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                String getNama = addnama.getText().toString();
-//                String getDesc = adddesc.getText().toString();
-//                String getLatitude = String.valueOf(addlatitude.getText());
-//                String getLongitude = String.valueOf(addlongitude.getText());
-//
-//                if (getNama.isEmpty()){
-//                    addnama.setError("Masukan nama destinasi");
-//                }else if (getDesc.isEmpty()){
-//                    adddesc.setError("Masukan deskripsi");
-//                }else if (getLatitude.isEmpty()){
-//                    addlatitude.setError("Masukan latitude");
-//                }else if (getLongitude.isEmpty()){
-//                    addlongitude.setError("Masukan latitude");
-//                }else{
-//                    database.child("Destinasi Wisata").push().setValue(new ListMaps(getNama, getDesc, getLatitude, getLongitude)).addOnSuccessListener(new OnSuccessListener<Void>() {
-//                        @Override
-//                        public void onSuccess(Void unused) {
-//                            Toast.makeText(AddActivity.this, "Data berhasil ditambah", Toast.LENGTH_SHORT).show();
-//                            startActivity(new Intent(AddActivity.this, MainActivity.class));
-////                            Intent intent = new Intent(AddActivity.this, MainActivity.class);
-////                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//                            finish();
-//                        }
-//                    }).addOnFailureListener(new OnFailureListener() {
-//                        @Override
-//                        public void onFailure(@NonNull Exception e) {
-//                            Toast.makeText(AddActivity.this, "Data gagal ditambah", Toast.LENGTH_SHORT).show();
-//                        }
-//                    });
-//                }
-//            }
-//        });
+        btn_simpan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String getNama = addnama.getText().toString();
+                String getDesc = adddesc.getText().toString();
+                double getLatitude = Double.parseDouble(addlatitude.getText().toString());
+                double getLongitude = Double.parseDouble(addlongitude.getText().toString());
+                ListMaps listMap = new ListMaps();
+
+                listMap.setTitle(getNama);
+                listMap.setDescription(getDesc);
+                listMap.setLatitude(getLatitude);
+                listMap.setLongitude(getLongitude);
+
+                if (getNama.isEmpty()){
+                    addnama.setError("Masukkan nama destinasi");
+                }else if (getDesc.isEmpty()){
+                    adddesc.setError("Masukkan deskripsi");
+                }else if (String.valueOf(getLatitude).isEmpty()){
+                    addlatitude.setError("Masukkan latitude");
+                }else if (String.valueOf(getLongitude).isEmpty()){
+                    addlongitude.setError("Masukkan latitude");
+                }else{
+                    new DBHelper().addWisata(listMap, new DBHelper.DataStatus() {
+                        @Override
+                        public void DataIsLoaded(List<ListMaps> listMaps, List<String> keys) {
+
+                        }
+
+                        @Override
+                        public void DataIsInserted() {
+                            Toast.makeText(AddActivity.this, "Data berhasil dimasukkan!",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+
+                        @Override
+                        public void DataIsUpdated() {
+
+                        }
+
+                        @Override
+                        public void DataIsDeleted() {
+
+                        }
+                    });
+                }
+            }
+        });
 
     }
 }

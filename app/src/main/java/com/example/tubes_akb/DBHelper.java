@@ -7,6 +7,7 @@ package com.example.tubes_akb;
 
 import androidx.annotation.NonNull;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -54,5 +55,17 @@ public class DBHelper {
 
             }
         });
+    }
+
+    public void addWisata(ListMaps listMap, final DataStatus dataStatus){
+        String key = databaseReference.push().getKey();
+
+        databaseReference.child(key).setValue(listMap).
+                addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        dataStatus.DataIsInserted();
+                    }
+                });
     }
 }

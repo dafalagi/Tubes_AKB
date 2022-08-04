@@ -48,6 +48,7 @@ public class AdapterDestinasi{
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(view.getContext(), EditActivity.class);
+                    intent.putExtra("id", nWisataAdapter.keys.get(getBindingAdapterPosition()));
                     view.getContext().startActivity(intent);
                 }
             });
