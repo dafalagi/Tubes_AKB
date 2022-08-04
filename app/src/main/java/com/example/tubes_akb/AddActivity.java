@@ -73,6 +73,8 @@ public class AddActivity extends AppCompatActivity {
                         public void DataIsInserted() {
                             Toast.makeText(AddActivity.this, "Data berhasil dimasukkan!",
                                     Toast.LENGTH_SHORT).show();
+                            finish();
+                            return;
                         }
 
                         @Override
