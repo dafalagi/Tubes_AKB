@@ -50,10 +50,10 @@ public class EditActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ListMaps listEdit = new ListMaps();
-                listEdit.setTitle(title);
-                listEdit.setDescription(description);
-                listEdit.setLatitude(latitude);
-                listEdit.setLongitude(longitude);
+                listEdit.setTitle(titletxt.getText().toString());
+                listEdit.setDescription(descriptiontxt.getText().toString());
+                listEdit.setLatitude(Double.parseDouble(latitudetxt.getText().toString()));
+                listEdit.setLongitude(Double.parseDouble(longitudetxt.getText().toString()));
                 new DBHelper().updateWisata(key, listEdit, new DBHelper.DataStatus() {
                     @Override
                     public void DataIsLoaded(List<ListMaps> listMaps, List<String> keys) {
