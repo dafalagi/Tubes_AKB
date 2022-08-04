@@ -82,3 +82,7 @@ public class EditActivity extends AppCompatActivity {
         });
     }
 }
+
+//Nama : Ikhsan Nurul Rizki
+//NIM : 10119097
+//Kelas : IF-3
