@@ -6,7 +6,9 @@
 package com.example.tubes_akb;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
@@ -41,6 +43,14 @@ public class AdapterDestinasi{
 
             title = (TextView) itemView.findViewById(R.id.ListTitle);
             desc = (TextView) itemView.findViewById(R.id.ListDescription);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(view.getContext(), EditActivity.class);
+                    view.getContext().startActivity(intent);
+                }
+            });
         }
 
         public void bind(ListMaps listMap, String key){
