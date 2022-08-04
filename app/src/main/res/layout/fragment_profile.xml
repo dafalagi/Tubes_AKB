@@ -38,14 +38,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/mochiypopone"
+                android:fontFamily="@font/poppins_regular"
                 android:text="Dafa Rizky Fahreza"
                 android:textSize="15dp"
                 android:layout_marginTop="55dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
-                android:fontFamily="@font/mochiypopone"
+                android:fontFamily="@font/poppins_regular"
                 android:layout_height="wrap_content"
                 android:text="10119113"
                 android:textSize="15dp"/>
@@ -53,7 +53,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/mochiypopone"
+                android:fontFamily="@font/poppins_regular"
                 android:text="IF-3"
                 android:textSize="15dp"/>
         </LinearLayout>
