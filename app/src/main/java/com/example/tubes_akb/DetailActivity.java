@@ -49,6 +49,7 @@ public class DetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(DetailActivity.this, EditActivity.class);
+                intent.putExtra("key", key);
                 intent.putExtra("title", title);
                 intent.putExtra("description", description);
                 intent.putExtra("latitude", latitude);
