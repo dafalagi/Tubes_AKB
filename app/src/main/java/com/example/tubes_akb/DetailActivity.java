@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.List;
 
 public class DetailActivity extends AppCompatActivity {
     private String key;
@@ -51,9 +54,33 @@ public class DetailActivity extends AppCompatActivity {
         });
 
         Button deletebtn = findViewById(R.id.btnHapus);
-        editbtn.setOnClickListener(new View.OnClickListener() {
+        deletebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                new DBHelper().deleteWisata(key, new DBHelper.DataStatus() {
+                    @Override
+                    public void DataIsLoaded(List<ListMaps> listMaps, List<String> keys) {
+
+                    }
+
+                    @Override
+                    public void DataIsInserted() {
+
+                    }
+
+                    @Override
+                    public void DataIsUpdated() {
+
+                    }
+
+                    @Override
+                    public void DataIsDeleted() {
+                        Toast.makeText(DetailActivity.this,
+                                "Data berhasil dihapus!", Toast.LENGTH_SHORT).show();
+                        finish();
+                        return;
+                    }
+                });
             }
         });
 
