@@ -46,8 +46,7 @@ public class EditActivity extends AppCompatActivity {
         latitudetxt.setText(String.valueOf(latitude));
         longitudetxt.setText(String.valueOf(longitude));
 
-        Button editBtn = findViewById(R.id.BtnSaveEdit);
-        editBtn.setOnClickListener(new View.OnClickListener() {
+        BtnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ListMaps listEdit = new ListMaps();
@@ -55,8 +54,6 @@ public class EditActivity extends AppCompatActivity {
                 listEdit.setDescription(description);
                 listEdit.setLatitude(latitude);
                 listEdit.setLongitude(longitude);
-                Intent intent = new Intent(EditActivity.this, HomeFragment.class);
-                startActivity(intent);
                 new DBHelper().updateWisata(key, listEdit, new DBHelper.DataStatus() {
                     @Override
                     public void DataIsLoaded(List<ListMaps> listMaps, List<String> keys) {
@@ -70,7 +67,12 @@ public class EditActivity extends AppCompatActivity {
 
                     @Override
                     public void DataIsUpdated() {
-                       Toast.makeText(EditActivity.this, "Data berhasil diubah!", Toast.LENGTH_LONG).show();
+                       Toast.makeText(EditActivity.this,
+                               "Data berhasil diubah!", Toast.LENGTH_LONG).show();
+                       Intent intent = new Intent(EditActivity.this, MainActivity.class);
+                       startActivity(intent);
+                       finish();
+                       return;
                     }
 
                     @Override
