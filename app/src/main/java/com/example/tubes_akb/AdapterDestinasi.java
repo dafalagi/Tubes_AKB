@@ -65,6 +65,7 @@ public class AdapterDestinasi{
             description.setText(listMap.getDescription());
             latitude.setText(String.valueOf(listMap.getLatitude()));
             longitude.setText(String.valueOf(listMap.getLongitude()));
+            this.key = key;
         }
     }
 
